@@ -1,0 +1,236 @@
+<html><head lang="en">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+
+	<title>Single Page App Without A Framework</title>
+
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet">
+	
+	<link href="assets/css/styles.css" rel="stylesheet">
+
+</head>
+
+<body id="myBlapy">
+
+	<header class="compact">
+		<h2 class="tzine"><a href="http://tutorialzine.com/2015/02/single-page-app-without-a-framework/">Back to article</a></h2>
+		<h1><a href="#">Single Page App Without A Framework</a></h1>
+	</header>
+
+	<div class="main-content">
+
+		<div class="all-products page visible">
+
+			<div class="filters">
+				<form id="form-ui">
+				
+					<div class="filter-criteria" data-filter-group="manufacturer">
+						<span>Manufacturer</span>
+						<label><input type="checkbox" name="manufacturer" value=".apple">Apple</label>
+						<label><input type="checkbox" name="manufacturer" value=".samsung">Samsung</label>
+						<label><input type="checkbox" name="manufacturer" value=".htc">HTC</label>
+						<label><input type="checkbox" name="manufacturer" value=".nokia">Nokia</label>
+						<label><input type="checkbox" name="manufacturer" value=".zte">ZTE</label>
+						<label><input type="checkbox" name="manufacturer" value=".sony">Sony</label>
+					</div>
+
+					<div class="filter-criteria" data-filter-group="storage">
+						<span>Storage Size</span>
+						<label><input type="checkbox" value=".gb16" name="storage">16 GB</label>
+						<label><input type="checkbox" value=".gb32" name="storage">32 GB</label>
+					</div>
+
+					<div class="filter-criteria" data-filter-group="os">
+						<span>OS</span>
+						<label><input type="checkbox" value=".android" name="os">Android</label>
+						<label><input type="checkbox" value=".ios" name="os">iOS</label>
+						<label><input type="checkbox" value=".windows" name="os">Windows</label>
+					</div>
+
+					<div class="filter-criteria" data-filter-group="camera">
+						<span>Camera</span>
+						<label><input type="checkbox" value=".mpx5" name="camera">5 Mpx</label>
+						<label><input type="checkbox" value=".mpx8" name="camera">8 Mpx</label>
+						<label><input type="checkbox" value=".mpx12" name="camera">12 Mpx</label>
+						<label><input type="checkbox" value=".mpx15" name="camera">15 Mpx</label>
+					</div>
+
+					<button>Clear filters</button>
+
+				</form>
+
+			</div> <!--filters-->
+
+			<ul class="products-list" data-blapy-container="true" data-blapy-container-name="products-list" data-blapy-update="json" data-blapy-template-init="products.json" data-blapy-update-rule="local" style="position: relative; height: 0px;"><div style="display:none" data-blapy-container-tpl="true"><!--
+				<li class="product ${specs.manufacturer}" data-index="${id}" data-blapy-link="true">
+					<a href="#" class="product-photo"><img src="${image.small}" height="130" alt="${name}" href="products.json" data-blapy-link="true" data-blapy-embedding-blockid="single-product"></a>
+					<h2><a href="#"> ${name} </a></h2>
+					<ul class="product-description">
+						<li><span>Manufacturer: </span>${specs.manufacturer}</li>
+						<li><span>Storage: </span>${specs.storage} GB</li>
+						<li><span>OS: </span>${specs.os}</li>
+						<li><span>Camera: </span>${specs.camera} Mpx</li>
+					</ul>
+					<button>Buy Now!</button>
+					<p class="product-price">${price}$</p>
+					<div class="highlight"></div>
+				</li>
+			--></div>
+				<li class="product Sony Android gb16 mpx15" data-index="1" data-blapy-link="true">
+					<a href="#" class="product-photo"><img src="assets/images/sony-xperia-z3.jpg" height="130" alt="Sony Xperia Z3" href="products.json" data-blapy-link="true" data-blapy-embedding-blockid="single-product"></a>
+					<h2><a href="#"> Sony Xperia Z3 </a></h2>
+					<ul class="product-description">
+						<li><span>Manufacturer: </span>Sony</li>
+						<li><span>Storage: </span>16 GB</li>
+						<li><span>OS: </span>Android</li>
+						<li><span>Camera: </span>15 Mpx</li>
+					</ul>
+					<button>Buy Now!</button>
+					<p class="product-price">899$</p>
+					<div class="highlight"></div>
+				</li>
+			
+				<li class="product Apple iOS gb16 mpx8" data-index="2" data-blapy-link="true">
+					<a href="#" class="product-photo"><img src="assets/images/iphone6.jpg" height="130" alt="Iphone 6" href="products.json" data-blapy-link="true" data-blapy-embedding-blockid="single-product"></a>
+					<h2><a href="#"> Iphone 6 </a></h2>
+					<ul class="product-description">
+						<li><span>Manufacturer: </span>Apple</li>
+						<li><span>Storage: </span>16 GB</li>
+						<li><span>OS: </span>iOS</li>
+						<li><span>Camera: </span>8 Mpx</li>
+					</ul>
+					<button>Buy Now!</button>
+					<p class="product-price">899$</p>
+					<div class="highlight"></div>
+				</li>
+			
+				<li class="product HTC Android gb32 mpx5" data-index="3" data-blapy-link="true">
+					<a href="#" class="product-photo"><img src="assets/images/htc-one.jpg" height="130" alt="HTC One M8" href="products.json" data-blapy-link="true" data-blapy-embedding-blockid="single-product"></a>
+					<h2><a href="#"> HTC One M8 </a></h2>
+					<ul class="product-description">
+						<li><span>Manufacturer: </span>HTC</li>
+						<li><span>Storage: </span>32 GB</li>
+						<li><span>OS: </span>Android</li>
+						<li><span>Camera: </span>5 Mpx</li>
+					</ul>
+					<button>Buy Now!</button>
+					<p class="product-price">899$</p>
+					<div class="highlight"></div>
+				</li>
+			
+				<li class="product Samsung Android gb32 mpx12" data-index="4" data-blapy-link="true">
+					<a href="#" class="product-photo"><img src="assets/images/galaxy-alpha.jpg" height="130" alt="Galaxy Alpha" href="products.json" data-blapy-link="true" data-blapy-embedding-blockid="single-product"></a>
+					<h2><a href="#"> Galaxy Alpha </a></h2>
+					<ul class="product-description">
+						<li><span>Manufacturer: </span>Samsung</li>
+						<li><span>Storage: </span>32 GB</li>
+						<li><span>OS: </span>Android</li>
+						<li><span>Camera: </span>12 Mpx</li>
+					</ul>
+					<button>Buy Now!</button>
+					<p class="product-price">899$</p>
+					<div class="highlight"></div>
+				</li>
+			
+				<li class="product Nokia Windows gb16 mpx5" data-index="5" data-blapy-link="true">
+					<a href="#" class="product-photo"><img src="assets/images/nokia-lumia.jpg" height="130" alt="Nokia Lumia" href="products.json" data-blapy-link="true" data-blapy-embedding-blockid="single-product"></a>
+					<h2><a href="#"> Nokia Lumia </a></h2>
+					<ul class="product-description">
+						<li><span>Manufacturer: </span>Nokia</li>
+						<li><span>Storage: </span>16 GB</li>
+						<li><span>OS: </span>Windows</li>
+						<li><span>Camera: </span>5 Mpx</li>
+					</ul>
+					<button>Buy Now!</button>
+					<p class="product-price">450$</p>
+					<div class="highlight"></div>
+				</li>
+			
+				<li class="product ZTE Android gb32 mpx12" data-index="6" data-blapy-link="true">
+					<a href="#" class="product-photo"><img src="assets/images/zte-nubia.jpg" height="130" alt="Zte Nubia" href="products.json" data-blapy-link="true" data-blapy-embedding-blockid="single-product"></a>
+					<h2><a href="#"> Zte Nubia </a></h2>
+					<ul class="product-description">
+						<li><span>Manufacturer: </span>ZTE</li>
+						<li><span>Storage: </span>32 GB</li>
+						<li><span>OS: </span>Android</li>
+						<li><span>Camera: </span>12 Mpx</li>
+					</ul>
+					<button>Buy Now!</button>
+					<p class="product-price">399$</p>
+					<div class="highlight"></div>
+				</li>
+			
+				<li class="product Samsung Android gb16 mpx15" data-index="7" data-blapy-link="true">
+					<a href="#" class="product-photo"><img src="assets/images/galaxy-s5.jpg" height="130" alt="Samsung Galaxy S5" href="products.json" data-blapy-link="true" data-blapy-embedding-blockid="single-product"></a>
+					<h2><a href="#"> Samsung Galaxy S5 </a></h2>
+					<ul class="product-description">
+						<li><span>Manufacturer: </span>Samsung</li>
+						<li><span>Storage: </span>16 GB</li>
+						<li><span>OS: </span>Android</li>
+						<li><span>Camera: </span>15 Mpx</li>
+					</ul>
+					<button>Buy Now!</button>
+					<p class="product-price">399$</p>
+					<div class="highlight"></div>
+				</li>
+			
+				<li class="product Apple iOS gb16 mpx8" data-index="8" data-blapy-link="true">
+					<a href="#" class="product-photo"><img src="assets/images/iphone5s.jpg" height="130" alt="Iphone 5S" href="products.json" data-blapy-link="true" data-blapy-embedding-blockid="single-product"></a>
+					<h2><a href="#"> Iphone 5S </a></h2>
+					<ul class="product-description">
+						<li><span>Manufacturer: </span>Apple</li>
+						<li><span>Storage: </span>16 GB</li>
+						<li><span>OS: </span>iOS</li>
+						<li><span>Camera: </span>8 Mpx</li>
+					</ul>
+					<button>Buy Now!</button>
+					<p class="product-price">399$</p>
+					<div class="highlight"></div>
+				</li>
+			</ul>
+
+		</div> <!--all-products-page-->
+
+		<div class="single-product page">
+
+			<div class="overlay"></div>
+
+			<div class="preview-large">
+				<h3>Single product view</h3>
+				<img src="">
+				<p></p>
+
+				<span class="close">×</span>
+			</div>
+
+		</div>
+
+		<div class="error page">
+			<h3>Sorry, something went wrong :(</h3>
+		</div> <!--error-page-->
+
+	</div> <!--main-content-->
+
+
+<script type="text/javascript" src="extlib/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="extlib/sammy/lib/sammy.js"></script>
+<script type="text/javascript" src="extlib/iFSM/extlib/jquery.dotimeout.js"></script>
+<script type="text/javascript" src="extlib/iFSM/extlib/jquery.attrchange.js"></script>
+<script type="text/javascript" src="extlib/iFSM/iFSM.js"></script>
+<script type="text/javascript" src="extlib/json2html/json2html.js"></script>
+<!-- load of the Blapy script -->
+<script type="text/javascript" src="Blapy.js"></script>
+<!-- start Blapy -->
+<script>
+    $( document ).ready(function() {
+        $('#myBlapy').Blapy({activeSammy:true});
+    });
+</script>
+<script type="text/javascript" src="extlib/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="extlib/isotope.pkgd.min.js"></script>
+<script type="text/javascript" src="isotope.settings.js"></script>
+
+
+
+
+</body></html>
